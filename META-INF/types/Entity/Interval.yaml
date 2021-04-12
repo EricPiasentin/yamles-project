@@ -1,0 +1,17 @@
+---
+name: Interval
+version: 0
+fields:
+  end:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: 1
+  start:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- start
+- end

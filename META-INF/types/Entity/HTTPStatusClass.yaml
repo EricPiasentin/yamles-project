@@ -1,0 +1,21 @@
+---
+name: HTTPStatusClass
+version: 0
+fields:
+  endStatus:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  startStatus:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- name

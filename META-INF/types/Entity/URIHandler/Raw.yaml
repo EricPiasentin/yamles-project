@@ -1,0 +1,14 @@
+---
+name: Raw
+version: 0
+fields:
+  defaultFile:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  fileSystemPath:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1

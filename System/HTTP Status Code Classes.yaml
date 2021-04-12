@@ -1,0 +1,30 @@
+---
+type: HTTPStatusClassGroup
+fields:
+  name: HTTP Status Code Classes
+children:
+- type: HTTPStatusClass
+  fields:
+    endStatus: 399
+    name: Redirection (300-399)
+    startStatus: 300
+- type: HTTPStatusClass
+  fields:
+    endStatus: 199
+    name: Provisional Response (100-199)
+    startStatus: 100
+- type: HTTPStatusClass
+  fields:
+    endStatus: 599
+    name: Server Error (500-599)
+    startStatus: 500
+- type: HTTPStatusClass
+  fields:
+    endStatus: 299
+    name: Successful (200-299)
+    startStatus: 200
+- type: HTTPStatusClass
+  fields:
+    endStatus: 499
+    name: Client Error (400-499)
+    startStatus: 400

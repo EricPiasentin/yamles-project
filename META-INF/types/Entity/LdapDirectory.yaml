@@ -1,0 +1,56 @@
+---
+name: LdapDirectory
+version: 3
+fields:
+  authRealm:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  authType:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  cacheSize:
+    type: integer
+    defaultValues:
+    - data: 8
+    cardinality: '?'
+  cacheTimeout:
+    type: integer
+    defaultValues:
+    - data: 300000
+    cardinality: '?'
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  sslCertificate:
+    type: '@Certificate'
+    cardinality: '?'
+  sslEnabled:
+    type: boolean
+    defaultValues:
+    - {}
+    cardinality: '?'
+  url:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  userName:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+components:
+  Property: '?'
+keyFields:
+- name

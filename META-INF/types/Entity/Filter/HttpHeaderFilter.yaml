@@ -1,0 +1,20 @@
+---
+name: HttpHeaderFilter
+version: 0
+class: com.vordel.circuit.authn.HttpHeaderFilter
+fields:
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)authentication
+    cardinality: 1
+  headerName:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  tokenType:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1

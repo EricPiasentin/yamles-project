@@ -1,0 +1,27 @@
+---
+type: FilterCircuit
+fields:
+  description: ""
+  name: Default API Proxy Routing
+  start: ./Default Routing
+children:
+- type: SwitchFilter
+  fields:
+    attributeName: ${params.out.type}
+    defaultCircuit: /Policies/Generated Policies/REST API's/Templates/Default Profile-based Routing
+    name: Default Routing
+  children:
+  - type: SwitchCircuitReference
+    fields:
+      circuitPK: /Policies/Generated Policies/REST API's/Templates/Default OAuth-based Routing
+      comparatorType: is
+      compareWith: oauth
+      name: Id-0001529531571877-ffffffffa199093d-1
+      priority: 0
+  - type: SwitchCircuitReference
+    fields:
+      circuitPK: /Policies/Generated Policies/REST API's/Templates/Default SSL-based Routing
+      comparatorType: is
+      compareWith: ssl
+      name: Id-0001529531619406-ffffffff85b212c2-1
+      priority: 1

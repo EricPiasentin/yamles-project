@@ -1,0 +1,90 @@
+---
+name: AmaModule
+version: 5
+class: com.vordel.ama.AmaModule
+fields:
+  SSLCertificate:
+    type: '@Certificate'
+    cardinality: '?'
+  SSLCipherSuite:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  SSLClientAuthRequired:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  SSLTrustedCerts:
+    type: '@Certificate'
+    cardinality: '*'
+  authentiationFilterCircuit:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  enabled:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  limitsTrackingEnabled:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  listenInterface:
+    type: string
+    defaultValues:
+    - data: 0.0.0.0
+    cardinality: 1
+  maxBrowsingSize:
+    type: integer
+    defaultValues:
+    - data: 400
+    cardinality: 1
+  memoryLimit:
+    type: long
+    defaultValues:
+    - data: 1073741824
+    cardinality: 1
+  networkBrokerGroupId:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  networkBrokerGroupLogin:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  networkBrokerGroupPassword:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  port:
+    type: integer
+    defaultValues:
+    - data: ${env.BROKER.PORT}
+    cardinality: 1
+  sharedDirectory:
+    type: string
+    defaultValues:
+    - data: messaging-shared
+    cardinality: '?'
+  storeUsageLimit:
+    type: long
+    defaultValues:
+    - data: 107374182400
+    cardinality: 1
+  tempDiskLimit:
+    type: long
+    defaultValues:
+    - data: 53687091200
+    cardinality: 1
+  useSSL:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+loadorder: 900000

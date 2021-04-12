@@ -1,0 +1,17 @@
+---
+name: Internationalization
+version: 1
+fields:
+  country:
+    type: string
+    defaultValues:
+    - data: US
+    cardinality: 1
+  language:
+    type: string
+    defaultValues:
+    - data: en
+    cardinality: 1
+components:
+  InternationalizationFilter: '*'
+  InternationalizationCategory: '*'

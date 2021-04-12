@@ -1,0 +1,14 @@
+---
+name: EngineCommand
+version: 0
+fields:
+  order:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  when:
+    type: string
+    defaultValues:
+    - data: preInit
+    cardinality: 1

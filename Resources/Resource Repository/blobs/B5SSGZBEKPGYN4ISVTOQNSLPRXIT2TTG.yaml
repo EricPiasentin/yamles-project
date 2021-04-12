@@ -1,0 +1,7 @@
+---
+type: ResourceBlob
+fields:
+  ID: B5SSGZBEKPGYN4ISVTOQNSLPRXIT2TTG
+  encoding: ISO-8859-1
+  type: dtd
+  content: '{{file "B5SSGZBEKPGYN4ISVTOQNSLPRXIT2TTG.dtd" "binary"}}'

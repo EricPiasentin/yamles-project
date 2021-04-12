@@ -1,0 +1,118 @@
+---
+name: JWTVerifyFilter
+version: 7
+class: com.vordel.circuit.jwt.JWTVerifyFilter
+fields:
+  contentTypes:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  critHeader:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  detachedSignature:
+    type: string
+    defaultValues:
+    - data: ${content.body}
+    cardinality: 1
+  headerClaimValidationPolicy:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  isDetachedSignatureEnabled:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  jwkKey:
+    type: string
+    defaultValues:
+    - data: ${jwk}
+    cardinality: 1
+  jwsToken:
+    type: string
+    defaultValues:
+    - data: ${payload}
+    cardinality: 1
+  keyDiscoveryCircuit:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  keyDiscoveryResultType:
+    type: string
+    defaultValues:
+    - data: JWK
+    cardinality: '*'
+  keyDiscoverySelection:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  payloadClaimValidationPolicy:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  publicKeyAlias:
+    type: '@Certificate'
+    cardinality: 1
+  publicKeyLocation:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  publicKeyMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${certificate}
+    cardinality: 1
+  sharedKey:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: 1
+  sharedKeyInMsgAttr:
+    type: string
+    defaultValues:
+    - data: ${symmetric.key}
+    cardinality: 1
+  sharedKeySelection:
+    type: integer
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  signAlgorithms:
+    type: string
+    defaultValues:
+    - data: RS256
+    - data: RS384
+    - data: RS512
+    - data: ES256
+    - data: ES384
+    - data: ES512
+    - data: PS256
+    - data: PS384
+    - data: PS512
+    - data: HS256
+    - data: HS384
+    - data: HS512
+    cardinality: '*'
+  types:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  useJwkKey:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  usePublicKey:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  useSharedKey:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1

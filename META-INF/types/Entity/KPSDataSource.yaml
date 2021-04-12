@@ -1,0 +1,23 @@
+---
+name: KPSDataSource
+version: 0
+fields:
+  description:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  impl:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+components:
+  KPSProperty: '*'
+keyFields:
+- name

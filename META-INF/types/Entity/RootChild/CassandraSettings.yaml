@@ -1,0 +1,84 @@
+---
+name: CassandraSettings
+version: 6
+fields:
+  keySpace:
+    type: string
+    defaultValues:
+    - data: x${DOMAINID}_${GROUPID}
+    cardinality: '?'
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - data: ""
+    cardinality: '?'
+  replication:
+    type: string
+    defaultValues:
+    - data: 1
+    cardinality: '?'
+  replicationStrategy:
+    type: string
+    defaultValues:
+    - data: org.apache.cassandra.locator.SimpleStrategy
+    cardinality: '?'
+  sslCertificate:
+    type: '@Certificate'
+    cardinality: '?'
+  sslCipherSuite:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  sslProtocolOptionsMask:
+    type: integer
+    defaultValues:
+    - data: 1
+    cardinality: '?'
+  sslTrustedCerts:
+    type: '@Certificate'
+    cardinality: '*'
+  throttlingKeySpace:
+    type: string
+    defaultValues:
+    - data: t${DOMAINID}_${GROUPID}
+    cardinality: '?'
+  throttlingReadConsistencyLevel:
+    type: string
+    defaultValues:
+    - data: ONE
+    cardinality: '?'
+  throttlingReplication:
+    type: string
+    defaultValues:
+    - data: 1
+    cardinality: '?'
+  throttlingReplicationStrategy:
+    type: string
+    defaultValues:
+    - data: org.apache.cassandra.locator.SimpleStrategy
+    cardinality: '?'
+  throttlingWriteConsistencyLevel:
+    type: string
+    defaultValues:
+    - data: ONE
+    cardinality: '?'
+  useSSL:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  username:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: '?'
+components:
+  CassandraServer: '*'
+keyFields:
+- name

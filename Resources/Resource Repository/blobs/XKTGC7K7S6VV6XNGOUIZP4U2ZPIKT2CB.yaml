@@ -1,0 +1,7 @@
+---
+type: ResourceBlob
+fields:
+  ID: XKTGC7K7S6VV6XNGOUIZP4U2ZPIKT2CB
+  encoding: ISO-8859-1
+  type: dtd
+  content: '{{file "XKTGC7K7S6VV6XNGOUIZP4U2ZPIKT2CB.dtd" "binary"}}'

@@ -1,0 +1,50 @@
+---
+name: EmailAlertSystem
+version: 3
+class: com.vordel.alert.email.AlertEmail
+fields:
+  connectionType:
+    type: string
+    defaultValues:
+    - data: NONE
+    cardinality: 1
+  from:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  mailDebugOn:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  port:
+    type: string
+    defaultValues:
+    - data: 25
+    cardinality: 1
+  smtp:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  subject:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  to:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  username:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'

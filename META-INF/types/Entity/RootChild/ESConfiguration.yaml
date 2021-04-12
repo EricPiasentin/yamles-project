@@ -1,0 +1,36 @@
+---
+name: ESConfiguration
+version: 36
+fields:
+  gitrev:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  passphraseTest:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: 1
+  productKey:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  typerepoVersion:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  version:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- name

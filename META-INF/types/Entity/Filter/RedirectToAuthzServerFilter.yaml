@@ -1,0 +1,30 @@
+---
+name: RedirectToAuthzServerFilter
+version: 1
+class: com.vordel.circuit.oauth.client.RedirectToAuthzServerFilter
+fields:
+  getStateFrom:
+    type: string
+    defaultValues:
+    - data: Config
+    cardinality: 1
+  profile:
+    type: '@OAuthAppProfile'
+    cardinality: '?'
+  scopeOverrides:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  state:
+    type: string
+    defaultValues:
+    - data: ${oauth.state.map}
+    cardinality: '?'
+  tokenKey:
+    type: string
+    defaultValues:
+    - data: ${authentication.subject.id}
+    cardinality: '?'
+components:
+  Property: '?'

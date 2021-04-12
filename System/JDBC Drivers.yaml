@@ -1,0 +1,25 @@
+---
+type: JDBCDriverSet
+fields:
+  name: JDBC Drivers
+children:
+- type: JDBCDriver
+  fields:
+    connValidationQuery: SELECT 1
+    driverClass: org.gjt.mm.mysql.Driver
+    productName: mysql
+- type: JDBCDriver
+  fields:
+    connValidationQuery: SELECT 1 FROM DUAL
+    driverClass: oracle.jdbc.driver.OracleDriver
+    productName: oracle
+- type: JDBCDriver
+  fields:
+    connValidationQuery: SELECT 1 FROM sysibm.sysdummy1
+    driverClass: com.ibm.db2.jcc.DB2Driver
+    productName: db2
+- type: JDBCDriver
+  fields:
+    connValidationQuery: SELECT 1
+    driverClass: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    productName: sqlserver

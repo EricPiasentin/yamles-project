@@ -1,0 +1,7 @@
+---
+type: ResourceBlob
+fields:
+  ID: JOUMGM7XA24HS3DOXBJT2UXDPXM454NW
+  encoding: US-ASCII
+  type: schema
+  content: '{{file "JOUMGM7XA24HS3DOXBJT2UXDPXM454NW.xsd" "binary"}}'

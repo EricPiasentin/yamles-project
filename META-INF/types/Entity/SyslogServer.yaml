@@ -1,0 +1,21 @@
+---
+name: SyslogServer
+version: 0
+fields:
+  facility:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  host:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- name

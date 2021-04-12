@@ -1,0 +1,7 @@
+---
+type: ResourceBlob
+fields:
+  ID: E5BTNAAVAS35MIPWPP73PA24MIE7WB22
+  encoding: US-ASCII
+  type: schema
+  content: '{{file "E5BTNAAVAS35MIPWPP73PA24MIE7WB22.xsd" "binary"}}'

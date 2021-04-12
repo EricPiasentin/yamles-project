@@ -1,0 +1,20 @@
+---
+name: JSONRemoveNodeFilter
+version: 2
+class: com.vordel.circuit.json.JSONRemoveNodeFilter
+fields:
+  failOnError:
+    type: boolean
+    defaultValues:
+    - {}
+    cardinality: 1
+  node:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  savedDeletedNodes:
+    type: boolean
+    defaultValues:
+    - {}
+    cardinality: 1

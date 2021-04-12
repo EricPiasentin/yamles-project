@@ -1,0 +1,16 @@
+---
+name: Command
+version: 0
+fields:
+  classname:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- name

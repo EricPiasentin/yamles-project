@@ -1,0 +1,109 @@
+---
+name: JMSService
+version: 5
+fields:
+  SSLCertificate:
+    type: '@Certificate'
+    cardinality: '?'
+  SSLCipherSuite:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  SSLTrustedCerts:
+    type: '@Certificate'
+    cardinality: '*'
+  connectionFactory:
+    type: string
+    defaultValues:
+    - data: connectionFactory
+    cardinality: 1
+  initialContextFactory:
+    type: string
+    defaultValues:
+    - data: com.vordel.ama.jndi.InitialContextFactory
+    cardinality: 1
+  jmsClientID:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  jmsConnStartupAsync:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  jmsReConnectOnConnFailure:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: '?'
+  maxThreadCount:
+    type: integer
+    defaultValues:
+    - data: 20
+    cardinality: 1
+  mq.channel:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  mq.hostName:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  mq.port:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  mq.queueManager:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  mq.sslCipherSpec:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  mq.sslFipsRequired:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  mq.transporType:
+    type: integer
+    defaultValues:
+    - data: 1
+    cardinality: '?'
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: 1
+  providerURL:
+    type: string
+    defaultValues:
+    - data: local
+    cardinality: 1
+  serviceType:
+    type: string
+    defaultValues:
+    - data: EMBEDDED_ACTIVEMQ
+    cardinality: '?'
+  userName:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+components:
+  Property: '?'
+keyFields:
+- name

@@ -1,0 +1,10 @@
+---
+name: AuthnRepositoryGroup
+version: 2
+components:
+  AuthnRepositoryDbGroup: '*'
+  AuthnRepositoryLocalGroup: '*'
+  AuthnRepositoryPassPortGroup: '*'
+  AuthnRepositoryPluginGroup: '*'
+  AuthnRepositoryLdapGroup: '*'
+  AuthnRepositoryKPSGroup: '*'

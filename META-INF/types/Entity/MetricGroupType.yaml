@@ -1,0 +1,31 @@
+---
+name: MetricGroupType
+version: 4
+fields:
+  description:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  enabled:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  maxNumMetricGroups:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  metric:
+    type: '@MetricType'
+    cardinality: +
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+components:
+  MetricGroupType: '*'
+keyFields:
+- name

@@ -1,0 +1,21 @@
+---
+name: JDBCDriver
+version: 4
+fields:
+  connValidationQuery:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: 1
+  driverClass:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  productName:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- productName

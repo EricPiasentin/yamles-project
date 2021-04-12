@@ -1,0 +1,24 @@
+---
+name: BoundCircuit
+version: 7
+fields:
+  name:
+    type: string
+    defaultValues:
+    - data: binding
+    cardinality: 1
+  paletteDrawer:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  paletteIcon:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+components:
+  InputPropertyDefinition: '*'
+  OutputPropertyDefinition: '*'
+keyFields:
+- name

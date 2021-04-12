@@ -1,0 +1,46 @@
+---
+name: GetAccessAuthZFilter
+version: 2
+class: com.vordel.circuit.getaccess.GetAccessAuthZFilter
+fields:
+  authnDriftTime:
+    type: long
+    defaultValues:
+    - {}
+    cardinality: '?'
+  authnUrlSet:
+    type: '@UrlSet'
+    cardinality: '?'
+  authzDriftTime:
+    type: long
+    defaultValues:
+    - {}
+    cardinality: '?'
+  authzUrlSet:
+    type: '@UrlSet'
+    cardinality: 1
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)authorization
+    cardinality: 1
+  insertActor:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  pdpResource:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  wsTrustIdAttributeName:
+    type: string
+    defaultValues:
+    - data: Id
+    cardinality: '?'
+  wsseNamespace:
+    type: '@WSSENamespace'
+    defaultValues:
+    - ref: /System/(NamespacesConfiguration)Namespace Configuration/(WSSENamespace)http://schemas.xmlsoap.org/ws/2002/12/secext
+    cardinality: 1

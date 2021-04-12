@@ -1,0 +1,154 @@
+---
+name: FTPScanner
+version: 10
+class: com.vordel.dwe.ftp.FTPScanner
+fields:
+  clientCert:
+    type: '@Certificate'
+    cardinality: '*'
+  connectionType:
+    type: string
+    defaultValues:
+    - data: FTP
+    cardinality: 1
+  directory:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  enabled:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  execPbsz:
+    type: string
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  execProt:
+    type: string
+    defaultValues:
+    - data: C
+    cardinality: '?'
+  fileType:
+    type: string
+    defaultValues:
+    - data: ASCII
+    cardinality: 1
+  filename:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  filterCircuit:
+    type: '@FilterCircuit'
+    cardinality: 1
+  ftpsFileType:
+    type: string
+    defaultValues:
+    - data: ASCII
+    cardinality: 1
+  ftpsPassive:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  host:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  hostFingerPrint:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  inPattern:
+    type: string
+    defaultValues:
+    - data: ([^\s]+(\.(?i)(xml|xhtml|soap|wsdl|asmx))$)
+    cardinality: 1
+  isImplicit:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  limitFiles:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  maxFiles:
+    type: integer
+    defaultValues:
+    - data: 100
+    cardinality: 1
+  multiSession:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  onPolicyFailure:
+    type: string
+    defaultValues:
+    - data: FTP_DO_NOTHING
+    cardinality: 1
+  onPolicySuccess:
+    type: string
+    defaultValues:
+    - data: FTP_DO_NOTHING
+    cardinality: 1
+  passive:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: 1
+  policyFailureMoveDir:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  policySuccessMoveDir:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  pollRateMs:
+    type: integer
+    defaultValues:
+    - data: 60000
+    cardinality: 1
+  port:
+    type: integer
+    defaultValues:
+    - data: 21
+    cardinality: 1
+  sftpClientKeyPair:
+    type: '@KeyPair'
+    cardinality: '*'
+  sslProtocol:
+    type: string
+    defaultValues:
+    - data: SSL
+    cardinality: 1
+  trustedCerts:
+    type: '@Certificate'
+    cardinality: '*'
+  username:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- name

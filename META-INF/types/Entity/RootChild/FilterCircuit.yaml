@@ -1,0 +1,36 @@
+---
+name: FilterCircuit
+version: 4
+fields:
+  category:
+    type: '@PolicyCategory'
+    defaultValues:
+    - ref: /System/(PolicyCategoryGroup)Policy Categories/(PolicyCategory)miscellaneous
+    cardinality: 1
+  description:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  fault:
+    type: '@Filter'
+    cardinality: '?'
+  logMask:
+    type: integer
+    defaultValues:
+    - data: 3
+    cardinality: 1
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  start:
+    type: '@Filter'
+    cardinality: 1
+components:
+  BoundCircuit: 1
+  Filter: '*'
+  Property: '*'
+keyFields:
+- name

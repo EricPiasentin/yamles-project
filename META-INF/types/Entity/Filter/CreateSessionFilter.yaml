@@ -1,0 +1,40 @@
+---
+name: CreateSessionFilter
+version: 0
+class: com.vordel.circuit.authn.CreateSessionFilter
+fields:
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)authentication
+    cardinality: 1
+  cookie:
+    type: string
+    defaultValues:
+    - data: VIDUSR
+    cardinality: 1
+  domain:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  httpOnly:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  onlySendOverSSL:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  sessionExpiry:
+    type: long
+    defaultValues:
+    - data: 43200000
+    cardinality: 1
+  uriprefix:
+    type: string
+    defaultValues:
+    - data: /
+    cardinality: 1

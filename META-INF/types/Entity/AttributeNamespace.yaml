@@ -1,0 +1,16 @@
+---
+name: AttributeNamespace
+version: 0
+fields:
+  URI:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  prefix:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- prefix

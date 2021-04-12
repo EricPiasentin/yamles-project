@@ -1,0 +1,56 @@
+---
+name: NegotiableSSLInterface
+version: 9
+class: com.vordel.dwe.NegotiableSSLInterface
+fields:
+  caCert:
+    type: '@Certificate'
+    cardinality: '*'
+  ciphers:
+    type: string
+    defaultValues:
+    - data: FIPS:!SSLv3:!aNULL:!TLSv1:!kRSA
+    cardinality: 1
+  clientAuth:
+    type: string
+    defaultValues:
+    - data: none
+    cardinality: 1
+  depth:
+    type: integer
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  dhParams:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: 1
+  hstsProfile:
+    type: '@HSTSProfile'
+    cardinality: '?'
+  resolveSubjectCNtoNetAddr:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  serverCert:
+    type: '@Certificate'
+    cardinality: 1
+  sessionCacheSize:
+    type: integer
+    defaultValues:
+    - data: 32
+    cardinality: 1
+  ssloptions:
+    type: string
+    defaultValues:
+    - data: nosslv2
+    - data: nosslv3
+    - data: notlsv1
+    - data: notlsv1_1
+    - data: noSslRenegotiation
+    cardinality: '*'
+components:
+  SSLIdentity: '?'
+abstract: true

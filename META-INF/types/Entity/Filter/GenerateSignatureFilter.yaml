@@ -1,0 +1,200 @@
+---
+name: GenerateSignatureFilter
+version: 21
+class: com.vordel.circuit.sig.GenerateSignatureFilter
+fields:
+  actor:
+    type: string
+    defaultValues:
+    - data: '##current##'
+    cardinality: 1
+  additionalItemsToSign:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  appendToRootOrSoapHeader:
+    type: string
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  attachmentTransform:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  digestAlgorithm:
+    type: string
+    defaultValues:
+    - data: http://www.w3.org/2000/09/xmldsig#sha1
+    cardinality: 1
+  envelopedSignature:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  extractNodeListAttributeName:
+    type: string
+    defaultValues:
+    - data: ${node.list}
+    cardinality: 1
+  extractNodesFromMessageAttribute:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  failIfNoNodes:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  generatedSymmetricKeyAttribute:
+    type: string
+    defaultValues:
+    - data: symmetric.key
+    cardinality: '?'
+  hmacSymmetricKeyLen:
+    type: integer
+    defaultValues:
+    - data: 256
+    cardinality: 1
+  includeSymmetricKeyInMessage:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  includeTransforms:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  insertCarriedKeyName:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  keyType:
+    type: string
+    defaultValues:
+    - data: asymmetric
+    cardinality: 1
+  keyWrapAlgorithm:
+    type: string
+    defaultValues:
+    - data: http://www.w3.org/2001/04/xmlenc#rsa-1_5
+    cardinality: 1
+  layoutType:
+    type: string
+    defaultValues:
+    - data: Lax
+    cardinality: 1
+  nodesToSignIdAttrName:
+    type: string
+    defaultValues:
+    - data: wsu:Id
+    cardinality: 1
+  readableFormat:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  sigLocationType:
+    type: integer
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  sigLocationXPath:
+    type: '@XPath'
+    cardinality: '?'
+  signatureConfirmationType:
+    type: string
+    defaultValues:
+    - data: none
+    cardinality: 1
+  signatureMethod:
+    type: string
+    defaultValues:
+    - data: http://www.w3.org/2000/09/xmldsig#rsa-sha1
+    cardinality: 1
+  signingCert:
+    type: '@Certificate'
+    cardinality: '?'
+  signingCertAttribute:
+    type: string
+    defaultValues:
+    - data: ${certificate}
+    cardinality: '?'
+  signingKeyType:
+    type: string
+    defaultValues:
+    - data: certificateInStore
+    cardinality: 1
+  specifyInclusiveNamespaces:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  strForSaml:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  symmetricKeyAttribute:
+    type: string
+    defaultValues:
+    - data: ${symmetric.key}
+    cardinality: '?'
+  symmetricKeyEncryptionCert:
+    type: '@Certificate'
+    cardinality: '?'
+  symmetricKeyEncryptionCertAttribute:
+    type: string
+    defaultValues:
+    - data: ${certificate}
+    cardinality: '?'
+  symmetricKeyEncryptionKeyType:
+    type: string
+    defaultValues:
+    - data: certificateInStore
+    cardinality: 1
+  symmetricSigningKeyType:
+    type: string
+    defaultValues:
+    - data: generated
+    cardinality: 1
+  timestampLifeTimeSecs:
+    type: long
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  timestampType:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  useDerivedKey:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  useSamlId:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  wsuIdElementSpecification:
+    type: '@ElementSpecifier'
+    cardinality: '*'
+  wsuIdHow:
+    type: string
+    defaultValues:
+    - data: xpath
+    cardinality: '?'
+  wsuIdXPath:
+    type: '@XPath'
+    cardinality: '*'
+  xpathPredicateWhatSign:
+    type: '@XPath'
+    cardinality: '*'
+components:
+  KeyInfoFormat: 1

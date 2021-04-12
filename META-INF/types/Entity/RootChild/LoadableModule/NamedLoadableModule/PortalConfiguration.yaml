@@ -1,0 +1,254 @@
+---
+name: PortalConfiguration
+version: 40
+class: com.vordel.apiportal.config.PortalConfiguration
+fields:
+  adminDN:
+    type: string
+    defaultValues:
+    - data: cn=apiadmin,ou=organizations,ou=APIPortal
+    cardinality: 1
+  adminEmail:
+    type: string
+    defaultValues:
+    - data: apiadmin@localhost
+    cardinality: 1
+  adminName:
+    type: string
+    defaultValues:
+    - data: apiadmin
+    cardinality: 1
+  adminPassword:
+    type: encrypted
+    defaultValues:
+    - data: ""
+    cardinality: 1
+  apiregAuthenticationPolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregFaultHandlerPolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregGlobalRequestPolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregGlobalResponsePolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregOAuthClientProfiles:
+    type: '@OAuthAppProfile'
+    cardinality: '*'
+  apiregOAuthTokenInfoPolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregOAuthTokenStores:
+    type: '@AccessTokenPersist'
+    cardinality: '*'
+  apiregRequestPolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregResponsePolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  apiregRoutingPolicies:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  applicationQuotaWarnThresholdPercent:
+    type: integer
+    defaultValues:
+    - data: 80
+    cardinality: 1
+  asyncExecutorStopWaitMs:
+    type: long
+    defaultValues:
+    - data: 5000
+    cardinality: 1
+  communityName:
+    type: string
+    defaultValues:
+    - data: Community
+    cardinality: 1
+  dbConn:
+    type: '@DbConnection'
+    cardinality: 1
+  excludeApiDeprecatedHeader:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  excludeApiRetireTimeHeader:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  filterCircuit:
+    type: '@FilterCircuit'
+    cardinality: 1
+  latestRestApiVersionUri:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: 1
+  ldapPort:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  ldapServer:
+    type: '@LdapDirectory'
+    cardinality: '?'
+  lifecycleSchedulerCorePoolSize:
+    type: integer
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  lifecycleSchedulerStopWaitMs:
+    type: long
+    defaultValues:
+    - data: 5000
+    cardinality: 1
+  metricsStoringEnabled:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  oauth2Hostname:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: 1
+  oauth2LoginPath:
+    type: string
+    defaultValues:
+    - data: /api/oauth/authorize
+    cardinality: 1
+  oauth2Port:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: 1
+  oauth2TokenPath:
+    type: string
+    defaultValues:
+    - data: /api/oauth/token
+    cardinality: 1
+  oauth2TokenRequestPath:
+    type: string
+    defaultValues:
+    - data: /api/oauth/authorize
+    cardinality: 1
+  orgDn:
+    type: string
+    defaultValues:
+    - data: ou=organizations
+    cardinality: 1
+  organizationRoot:
+    type: string
+    defaultValues:
+    - data: ou=organizations,ou=APIPortal
+    cardinality: 1
+  portalRoot:
+    type: string
+    defaultValues:
+    - data: ou=APIPortal
+    cardinality: 1
+  promotionCircuit:
+    type: '@FilterCircuit'
+    cardinality: 1
+  quotaCaching:
+    type: string
+    defaultValues:
+    - data: AUTO
+    cardinality: 1
+  quotaCachingDatabase:
+    type: '@DbConnection'
+    cardinality: 1
+  quotaCachingMinWindowSecs:
+    type: integer
+    defaultValues:
+    - data: 30
+    cardinality: 1
+  quotaReadConsistency:
+    type: string
+    defaultValues:
+    - data: ONE
+    cardinality: 1
+  quotaWriteConsistency:
+    type: string
+    defaultValues:
+    - data: ONE
+    cardinality: 1
+  smtpServer:
+    type: '@SMTPServer'
+    cardinality: '?'
+  ssoCalloutPolicy:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  systemQuotaWarnThresholdPercent:
+    type: integer
+    defaultValues:
+    - data: 80
+    cardinality: 1
+  useEmbedded:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+  usrprovAccountCreateFailureCircuit:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  usrprovAccountCreateSuccessCircuit:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  usrprovAuthNCircuit:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  usrprovEnabled:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  usrprovGetUserInfoCircuit:
+    type: '@FilterCircuit'
+    cardinality: '*'
+  vapiEventTTLMs:
+    type: long
+    defaultValues:
+    - data: 600000
+    cardinality: 1
+  vapiNotifierCorePoolSize:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  vapiNotifierKeepAliveMs:
+    type: long
+    defaultValues:
+    - data: 60000
+    cardinality: 1
+  vapiNotifierMaxPoolSize:
+    type: integer
+    defaultValues:
+    - data: -1
+    cardinality: 1
+  vapiNotifierStopWaitMs:
+    type: long
+    defaultValues:
+    - data: 5000
+    cardinality: 1
+  vapiPollerInitialDelayMs:
+    type: long
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  vapiPollerPeriodMs:
+    type: long
+    defaultValues:
+    - data: 1000
+    cardinality: 1
+  vapiPollerStopWaitMs:
+    type: long
+    defaultValues:
+    - data: 5000
+    cardinality: 1
+loadorder: 5000

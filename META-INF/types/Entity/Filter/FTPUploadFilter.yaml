@@ -1,0 +1,99 @@
+---
+name: FTPUploadFilter
+version: 8
+class: com.vordel.circuit.net.FTPUploadFilter
+fields:
+  clientCert:
+    type: '@Certificate'
+    cardinality: '*'
+  connectionType:
+    type: string
+    defaultValues:
+    - data: FTP
+    cardinality: 1
+  directory:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  execPbsz:
+    type: string
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  execProt:
+    type: string
+    defaultValues:
+    - data: C
+    cardinality: '?'
+  fileType:
+    type: string
+    defaultValues:
+    - data: ASCII
+    cardinality: 1
+  filename:
+    type: string
+    defaultValues:
+    - data: ${id}.out
+    cardinality: 1
+  ftpsFileType:
+    type: string
+    defaultValues:
+    - data: ASCII
+    cardinality: 1
+  ftpsPassive:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  host:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  hostFingerPrint:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  isImplicit:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  passive:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: 1
+  port:
+    type: integer
+    defaultValues:
+    - data: 21
+    cardinality: 1
+  sftpClientKeyPair:
+    type: '@KeyPair'
+    cardinality: '*'
+  sslProtocol:
+    type: string
+    defaultValues:
+    - data: SSL
+    cardinality: 1
+  trustedCerts:
+    type: '@Certificate'
+    cardinality: '*'
+  useTmpName:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  username:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1

@@ -1,0 +1,38 @@
+---
+name: InsertNodesFilter
+version: 1
+fields:
+  actor:
+    type: string
+    defaultValues:
+    - data: '##current##'
+    cardinality: '?'
+  inserterType:
+    type: integer
+    defaultValues:
+    - data: 2
+    cardinality: 1
+  messageAttribute:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  rootOrSoapHeader:
+    type: string
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  whereToInsert:
+    type: string
+    defaultValues:
+    - data: append
+    cardinality: 1
+  xpath:
+    type: '@XPath'
+    cardinality: '?'
+  xpathType:
+    type: string
+    defaultValues:
+    - data: append
+    cardinality: 1
+abstract: true

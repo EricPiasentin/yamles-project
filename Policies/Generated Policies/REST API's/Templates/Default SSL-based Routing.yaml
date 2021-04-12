@@ -1,0 +1,27 @@
+---
+type: FilterCircuit
+fields:
+  description: ""
+  name: Default SSL-based Routing
+  start: ./apimanager.outbound.ssl
+children:
+- type: ConnectToURLFilter
+  fields:
+    caCerts: []
+    name: apimanager.outbound.ssl
+    ssloptions:
+    - nosslv3
+    - notlsv1
+    - nosslv2
+    - notlsv1_1
+    url: ${destinationURL}
+    useRootCerts: false
+  logging:
+    fatal: 'Error occurred while routing request to endpoint. Error: ${circuit.exception}'
+    failure: Failed to route request to endpoint.
+    success: Successfully routed request to endpoint
+  children:
+  - type: SaveToFileFilter
+    fields:
+      directory: ${VINSTDIR}/message-archive
+      name: Persistence Details

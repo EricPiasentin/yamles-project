@@ -1,0 +1,81 @@
+---
+name: RegistryConnection
+version: 2
+fields:
+  authenticationMethod:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  connectionApi:
+    type: string
+    defaultValues:
+    - data: jaxr
+    cardinality: 1
+  lifeCycleManagerURL:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  maxRows:
+    type: integer
+    defaultValues:
+    - data: 20
+    cardinality: 1
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  password:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyHost:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyPassword:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyPort:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyUsername:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  queryManagerURI:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  securityURL:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  sslProxyHost:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  sslProxyPort:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  username:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+keyFields:
+- name

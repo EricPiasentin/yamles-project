@@ -1,0 +1,30 @@
+---
+name: CreateIDTokenFilter
+version: 0
+class: com.vordel.circuit.openidconnect.CreateIDTokenFilter
+fields:
+  issuer:
+    type: string
+    defaultValues:
+    - data: ${http.request.url}
+    cardinality: '?'
+  jwtExpiresIn:
+    type: long
+    defaultValues:
+    - data: 60
+    cardinality: '?'
+  jwtSigner:
+    type: '@Certificate'
+    cardinality: '?'
+  signatureAlg:
+    type: string
+    defaultValues:
+    - data: RS256
+    cardinality: '?'
+  subject:
+    type: string
+    defaultValues:
+    - data: ${authentication.subject.id}
+    cardinality: '?'
+components:
+  AdditionalClaims: '?'

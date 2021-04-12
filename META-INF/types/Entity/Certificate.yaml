@@ -1,0 +1,49 @@
+---
+name: Certificate
+version: 6
+fields:
+  certificateRealm:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  content:
+    type: binary
+    defaultValues:
+    - {}
+    cardinality: 1
+  conversation:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  dname:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  engine:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  issuer:
+    type: '@Certificate'
+    cardinality: '?'
+  key:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  keyId:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  storeType:
+    type: string
+    defaultValues:
+    - data: LOCAL
+    cardinality: 1
+keyFields:
+- dname

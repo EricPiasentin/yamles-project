@@ -1,0 +1,5 @@
+---
+type: TraceLogger
+fields:
+  enabled: true
+  name: Trace File Logger

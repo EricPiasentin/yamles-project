@@ -1,0 +1,10 @@
+---
+name: OperationCircuitChain
+version: 1
+fields:
+  afterOperationHooks:
+    type: '@FilterCircuit'
+    cardinality: 1
+  beforeOperationHooks:
+    type: '@FilterCircuit'
+    cardinality: 1

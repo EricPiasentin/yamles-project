@@ -1,0 +1,14 @@
+---
+name: SSLIdentity
+version: 1
+fields:
+  certificate:
+    type: '@Certificate'
+    cardinality: 1
+  servername:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- servername

@@ -1,0 +1,33 @@
+---
+name: StylesheetFilter
+version: 4
+class: com.vordel.circuit.conversion.StylesheetFilter
+fields:
+  keepOriginalContentType:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  parameterAttributes:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  provider:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: '?'
+  stylesheetURL:
+    type: '@Stylesheet'
+    cardinality: '?'
+  useMessageAttributesAsParameters:
+    type: boolean
+    defaultValues:
+    - {}
+    cardinality: '?'
+  xmlInplace:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'

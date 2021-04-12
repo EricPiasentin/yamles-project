@@ -1,0 +1,13 @@
+---
+name: XPathContentFilter
+version: 1
+class: com.vordel.circuit.contentfiltering.XPathContentFilter
+fields:
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)content-filtering
+    cardinality: 1
+  xpathContentCheck:
+    type: '@XPath'
+    cardinality: 1

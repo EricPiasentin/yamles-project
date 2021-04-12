@@ -1,0 +1,13 @@
+---
+type: ClientRegistrySettings
+fields:
+  name: Client Registry Settings
+children:
+- type: Cookie
+  fields:
+    cookieExpires: 3600
+    cookieHttpOnly: true
+    cookieMaxAge: 3600
+    cookieName: CLIENTREGISTRYCOOKIE
+    cookiePath: /
+    cookieSecure: true

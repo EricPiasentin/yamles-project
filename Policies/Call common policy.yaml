@@ -1,0 +1,24 @@
+---
+type: FilterCircuit
+fields:
+  description: ""
+  name: Call common policy
+  start: ./Policy Shortcut
+children:
+- type: CircuitDelegateFilter
+  fields:
+    circuitPK: /Policies/My common policy
+    name: Policy Shortcut
+  routing:
+    success: ../Reflect Message
+  logging:
+    fatal: 'Error in calling policy shortcut circuit. Error: ${circuit.exception}'
+    failure: Failed in calling policy shortcut
+    success: Success in calling policy shortcut
+- type: Reflector
+  fields:
+    name: Reflect Message
+  logging:
+    fatal: 'Error occurred while echoing the message. Error: ${circuit.exception}'
+    failure: Failed to echo back the message
+    success: Successfully echoed back the message

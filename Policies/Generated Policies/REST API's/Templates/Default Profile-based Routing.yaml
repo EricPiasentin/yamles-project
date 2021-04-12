@@ -1,0 +1,29 @@
+---
+type: FilterCircuit
+fields:
+  description: ""
+  name: Default Profile-based Routing
+  start: ./Connect to URL
+children:
+- type: ConnectToURLFilter
+  fields:
+    name: Connect to URL
+    profileInUse: true
+    profileSelector: ${params.authn}
+    profileType: selector
+    ssloptions:
+    - nosslv3
+    - notlsv1
+    - nosslv2
+    - notlsv1_1
+    url: ${destinationURL}
+    useRootCerts: false
+  logging:
+    fatal: 'Error occurred while routing request to endpoint. Error: ${circuit.exception}'
+    failure: Failed to route request to endpoint.
+    success: Successfully routed request to endpoint
+  children:
+  - type: SaveToFileFilter
+    fields:
+      directory: ${VINSTDIR}/message-archive
+      name: Persistence Details

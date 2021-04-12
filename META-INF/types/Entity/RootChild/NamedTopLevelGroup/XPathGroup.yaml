@@ -1,0 +1,20 @@
+---
+name: XPathGroup
+version: 3
+components:
+  XPathSignatureInsertionLocationGroup: '*'
+  XPathRemoveNodeLocationGroup: '*'
+  XPathSchemaValidationGroup: '*'
+  XPathAddNodeLocationGroup: '*'
+  XPathAssertionLocationGroup: '*'
+  XPathPredicateSignGroup: '*'
+  XPathWSAddressingGroup: '*'
+  XPathSignGroup: '*'
+  XPathTokenInsertionLocationGroup: '*'
+  XPathDecryptionGroup: '*'
+  XPathMTOMIncludeGroup: '*'
+  XPathAttributeLocationGroup: '*'
+  XPathSubjectLocationGroup: '*'
+  XPathSignatureLocationGroup: '*'
+  XPathContentCheckGroup: '*'
+  XPathGSSTokenLocationGroup: '*'

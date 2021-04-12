@@ -1,0 +1,104 @@
+---
+name: OAuthAppProfile
+version: 4
+fields:
+  assertionType:
+    type: string
+    defaultValues:
+    - data: CreateAssertion
+    cardinality: '?'
+  clientIdHeaderName:
+    type: string
+    defaultValues:
+    - data: client_id
+    cardinality: 1
+  clientSecretHeaderName:
+    type: string
+    defaultValues:
+    - data: client_secret
+    cardinality: 1
+  clientid:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  clientsecret:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  driftTime:
+    type: long
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  externalAssertion:
+    type: string
+    defaultValues:
+    - data: ${oauth.saml.assertion}
+    cardinality: '?'
+  jwtExpiresIn:
+    type: long
+    defaultValues:
+    - data: 60
+    cardinality: '?'
+  jwtSigner:
+    type: '@Certificate'
+    cardinality: '?'
+  lifeTime:
+    type: long
+    defaultValues:
+    - data: 60
+    cardinality: 1
+  locationOfClientDetails:
+    type: string
+    defaultValues:
+    - data: AuthorizationHeader
+    cardinality: 1
+  oauthFlowType:
+    type: string
+    defaultValues:
+    - data: authorization_code
+    cardinality: 1
+  redirectURL:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  resourceOwnerId:
+    type: string
+    defaultValues:
+    - data: ${oauth.resource.owner.id}
+    cardinality: '?'
+  resourceOwnerPassword:
+    type: string
+    defaultValues:
+    - data: ${oauth.resource.owner.password}
+    cardinality: '?'
+  resourceOwnerPasswordPrivate:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  resourceOwnerPasswordType:
+    type: string
+    defaultValues:
+    - data: wildcard
+    cardinality: 1
+  samlResourceOwnerId:
+    type: string
+    defaultValues:
+    - data: ${authentication.subject.id}
+    cardinality: '?'
+  samlSigner:
+    type: '@Certificate'
+    cardinality: '?'
+  signatureAlg:
+    type: string
+    defaultValues:
+    - data: RS256
+    cardinality: '?'
+components:
+  ScopeList: '?'
+  AdditionalClaims: '?'
+  Property: '?'

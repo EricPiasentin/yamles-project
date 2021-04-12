@@ -1,0 +1,284 @@
+---
+name: JWTSignFilter
+version: 4
+class: com.vordel.circuit.jwt.JWTSignFilter
+fields:
+  generateAUD:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateAUDMsgAttribute:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  generateCTY:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  generateEXP:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateEXPValue:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  generateIAT:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: '?'
+  generateISS:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateISSMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${http.request.url}
+    cardinality: '?'
+  generateJTI:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateJTIMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${id}
+    cardinality: '?'
+  generateNBF:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateNBFValue:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  generateOIDATH:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateOIDATHMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${openid.accesstoken}
+    cardinality: '?'
+  generateOIDCH:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateOIDCHMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${openid.code}
+    cardinality: '?'
+  generateSUB:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  generateSUBMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${authentication.subject.id}
+    cardinality: '?'
+  generateTyp:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  headerExtensionCircuit:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  headerExtensions:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  jwsMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${content.body}
+    cardinality: 1
+  payloadAudiences:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+  payloadExtensionCircuit:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  privateGenerateJku:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  privateGenerateJwk:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  privateGenerateKid:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: '?'
+  privateGenerateX5c:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  privateGenerateX5t:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  privateGenerateX5t256:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  privateGenerateX5u:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  privateJkuMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${jwkset.url}
+    cardinality: '?'
+  privateKeyAlias:
+    type: '@Certificate'
+    cardinality: 1
+  privateKeyIdMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${signer.keyId}
+    cardinality: '?'
+  privateKeyIdType:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  privateKeyLocation:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  privateKeyMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${certificate}
+    cardinality: 1
+  privateX5uMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${certificate.rfc5080.url}
+    cardinality: '?'
+  protectAlgorithm:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  selectedSignatureType:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  setOutputInAttribute:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: '?'
+  setOutputInAttributeName:
+    type: string
+    defaultValues:
+    - data: jwt.body
+    cardinality: '?'
+  setOutputInHeader:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  setOutputInHeaderLocation:
+    type: string
+    defaultValues:
+    - data: httpheaders
+    cardinality: '?'
+  setOutputInHeaderName:
+    type: string
+    defaultValues:
+    - data: x-jws-signature
+    cardinality: '?'
+  setOutputInHeaderOverwriteExistingHeader:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: '?'
+  sharedGenerateKid:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  sharedKey:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: 1
+  sharedKeyIdMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${sharedKeyId}
+    cardinality: '?'
+  sharedKeyInMsgAttr:
+    type: string
+    defaultValues:
+    - data: ${symmetric.key}
+    cardinality: 1
+  sharedKeySelection:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  signAlgorithm:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  signaturePayloadType:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1
+  useDetachedSignature:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  useDetachedSignatureAttributeName:
+    type: string
+    defaultValues:
+    - data: jws.detached.payload
+    cardinality: '?'
+  useJwtTemplate:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  useJwtTemplateMsgAttribute:
+    type: string
+    defaultValues:
+    - data: ${content.body}
+    cardinality: '?'

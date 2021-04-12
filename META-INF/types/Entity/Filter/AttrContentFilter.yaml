@@ -1,0 +1,20 @@
+---
+name: AttrContentFilter
+version: 1
+fields:
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)content-filtering
+    cardinality: 1
+  threatLibraryRegularExpression:
+    type: '@RegularExpression'
+    cardinality: '*'
+  threatOnceOffRegularExpression:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '*'
+components:
+  AttributeRegularExpression: '*'
+abstract: true

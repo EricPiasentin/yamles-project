@@ -1,0 +1,23 @@
+---
+type: FilterCircuit
+fields:
+  description: ""
+  name: Default URL-based Routing
+  start: ./Connect to URL
+children:
+- type: ConnectToURLFilter
+  fields:
+    caCerts: []
+    ciphers: DEFAULT
+    name: Connect to URL
+    url: ${destinationURL}
+    useRootCerts: false
+  logging:
+    fatal: 'Error occurred while routing request to endpoint. Error: ${circuit.exception}'
+    failure: Failed to route request to endpoint.
+    success: Successfully routed request to endpoint
+  children:
+  - type: SaveToFileFilter
+    fields:
+      directory: ${VINSTDIR}/message-archive
+      name: Persistence Details

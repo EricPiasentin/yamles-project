@@ -1,0 +1,16 @@
+---
+name: AddressRank
+version: 4
+fields:
+  addresses:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: +
+  rank:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: 1
+keyFields:
+- rank

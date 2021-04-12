@@ -1,0 +1,9 @@
+---
+name: NamespacesConfiguration
+version: 1
+class: com.vordel.common.EntityStoreNamespaceProvider
+components:
+  WSSENamespace: '*'
+  SignatureIDs: '*'
+  SOAPNamespace: '*'
+loadorder: 100

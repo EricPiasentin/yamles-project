@@ -1,0 +1,149 @@
+---
+name: ConnectionFilter
+version: 21
+class: com.vordel.circuit.net.ConnectionFilter
+fields:
+  caCerts:
+    type: '@Certificate'
+    cardinality: '*'
+  ciphers:
+    type: string
+    defaultValues:
+    - data: FIPS:!SSLv3:!aNULL:!TLSv1:!kRSA
+    cardinality: 1
+  closePreviousConnection:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  connectionFailurePolicy:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  forwardClientHostHeader:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  handleRedirects:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  loadResponseBody:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: '?'
+  performRetries:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  profile:
+    type: '@NamedAuthnProfile'
+    cardinality: '?'
+  profileInUse:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  profileSelector:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: '?'
+  profileType:
+    type: string
+    defaultValues:
+    - data: reference
+    cardinality: '?'
+  proxyServer:
+    type: '@ProxyServer'
+    cardinality: '?'
+  retryCount:
+    type: string
+    defaultValues:
+    - data: 5
+    cardinality: 1
+  retryHTTPRanges:
+    type: '@HTTPStatusClass'
+    cardinality: '*'
+  retryLatency:
+    type: string
+    defaultValues:
+    - data: 500
+    cardinality: 1
+  runPolicyOnConnectionFailure:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  saveTransactionOnFailure:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  sendProxyMode:
+    type: boolean
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  sendReceivedContentHeaders:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  slaBreachAsFailure:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  sslUsers:
+    type: '@Certificate'
+    cardinality: '*'
+  ssloptions:
+    type: string
+    defaultValues:
+    - data: nosslv2
+    - data: nosslv3
+    - data: notlsv1
+    - data: notlsv1_1
+    - data: noSslRenegotiation
+    cardinality: '*'
+  stickyCookieDomain:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: '?'
+  stickyCookieExpiry:
+    type: long
+    defaultValues:
+    - data: 600000
+    cardinality: '?'
+  stickyCookieName:
+    type: string
+    defaultValues:
+    - data: unnamed
+    cardinality: '?'
+  stickyCookiePath:
+    type: string
+    defaultValues:
+    - data: ""
+    cardinality: '?'
+  stickyness:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: '?'
+  transparentProxy:
+    type: boolean
+    defaultValues:
+    - data: "false"
+    cardinality: 1
+  useRootCerts:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+components:
+  SaveToFileFilter: 1

@@ -1,0 +1,25 @@
+---
+name: SamlAuthZExtractFilter
+version: 0
+class: com.vordel.circuit.saml.SamlAuthZExtractFilter
+fields:
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)authorization
+    cardinality: 1
+  resource:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  subjectMatch:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  subjectMatchType:
+    type: integer
+    defaultValues:
+    - data: 0
+    cardinality: 1

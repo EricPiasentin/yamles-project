@@ -1,0 +1,55 @@
+---
+name: ValidateOAuth2AccessTokenFilter
+version: 8
+class: com.vordel.circuit.oauth.provider.ValidateOAuthAccessTokenFilter
+fields:
+  accessTokenLocation:
+    type: string
+    defaultValues:
+    - data: HEADER
+    cardinality: 1
+  accessTokenLocationQueryString:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  accessTokenLocationSelector:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  authorizationHeaderPrefix:
+    type: string
+    defaultValues:
+    - data: Bearer
+    cardinality: '?'
+  circuitPK:
+    type: '@FilterCircuit'
+    cardinality: '?'
+  recordOutboundTxns:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  removeCredentials:
+    type: boolean
+    defaultValues:
+    - data: "true"
+    cardinality: 1
+  scopesMustMatch:
+    type: string
+    defaultValues:
+    - data: Any
+    cardinality: 1
+  scopesRequired:
+    type: string
+    defaultValues:
+    - data: ${scopes.required}
+    cardinality: '?'
+  validateScopesWith:
+    type: string
+    defaultValues:
+    - data: List
+    cardinality: 1
+components:
+  WithScopes: +

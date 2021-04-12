@@ -1,0 +1,81 @@
+---
+name: AWSClientConfiguration
+version: 2
+fields:
+  connectionTimeout:
+    type: integer
+    defaultValues:
+    - data: 50000
+    cardinality: '?'
+  maxConnections:
+    type: integer
+    defaultValues:
+    - data: 50
+    cardinality: '?'
+  maxErrorRetry:
+    type: integer
+    defaultValues:
+    - data: 3
+    cardinality: '?'
+  name:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: 1
+  protocol:
+    type: string
+    defaultValues:
+    - data: HTTPS
+    cardinality: 1
+  proxyDomain:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyHost:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyPassword:
+    type: encrypted
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyPort:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyUsername:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  proxyWorkstation:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+  socketReceiveBufferSizeHint:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  socketSendBufferSizeHint:
+    type: integer
+    defaultValues:
+    - {}
+    cardinality: '?'
+  socketTimeout:
+    type: integer
+    defaultValues:
+    - data: 50000
+    cardinality: '?'
+  userAgent:
+    type: string
+    defaultValues:
+    - {}
+    cardinality: '?'
+keyFields:
+- name

@@ -1,0 +1,7 @@
+---
+type: ResourceBlob
+fields:
+  ID: BCS4PSOE7PQAY5PZR52UY2VZVKZHYMMD
+  encoding: US-ASCII
+  type: schema
+  content: '{{file "BCS4PSOE7PQAY5PZR52UY2VZVKZHYMMD.xsd" "binary"}}'

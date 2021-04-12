@@ -1,0 +1,17 @@
+---
+name: AuthzTransactionMinderFilter
+version: 0
+class: com.vordel.circuit.transactionminder.AuthzTransactionMinderFilter
+fields:
+  category:
+    type: '@Category'
+    defaultValues:
+    - ref: /System/(CategoryGroup)Filter Categories/(Category)authorization
+    cardinality: 1
+  includeAttributes:
+    type: boolean
+    defaultValues:
+    - data: 1
+    cardinality: 1
+components:
+  LookupAttribute: '*'
