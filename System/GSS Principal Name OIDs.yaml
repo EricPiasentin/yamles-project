@@ -5,12 +5,12 @@ fields:
 children:
 - type: GSSPrincipalNameOid
   fields:
-    name: KERBEROS_V5_PRINCIPAL_NAME
-    oid: 1.2.840.113554.1.2.2.1
-- type: GSSPrincipalNameOid
-  fields:
     name: NT_USER_NAME
     oid: 1.2.840.113554.1.2.1.1
+- type: GSSPrincipalNameOid
+  fields:
+    name: KERBEROS_V5_PRINCIPAL_NAME
+    oid: 1.2.840.113554.1.2.2.1
 - type: GSSPrincipalNameOid
   fields:
     name: NT_EXPORT_NAME

@@ -5,72 +5,27 @@ fields:
 children:
 - type: SophosNameValue
   fields:
-    name: Access
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: EnableAutoStop
+    name: UueDecompression
     type: 3
     value: 0
 - type: SophosNameValue
   fields:
-    name: AllowPartialVirusData
+    name: StorageDetOnly
     type: 3
     value: 0
 - type: SophosNameValue
   fields:
-    name: MaxIntRecDepth
-    type: 2
-    value: 25
-- type: SophosNameValue
-  fields:
-    name: PowerPointMacroHandling
+    name: Stuffit
     type: 3
     value: 1
 - type: SophosNameValue
   fields:
-    name: RarDecompression
+    name: CleanRiff
     type: 3
     value: 1
 - type: SophosNameValue
   fields:
-    name: Emulation
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: VbFiltering
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: Mime
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: Vba5Dir
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: Ole2FileDisinfection
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: ZipDecompression
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: CleanMp3
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: OpenMacRf
+    name: Vba5p
     type: 3
     value: 1
 - type: SophosNameValue
@@ -80,52 +35,47 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
-    name: PalmPilotHandling
+    name: GrpInternet
+    type: 9
+    value: 2
+- type: SophosNameValue
+  fields:
+    name: ArjDecompression
     type: 3
     value: 1
 - type: SophosNameValue
   fields:
-    name: Upx
+    name: Base64
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: SfxArchives
     type: 3
     value: 1
 - type: SophosNameValue
   fields:
-    name: Pdf
+    name: ScrapObjectHandling
     type: 3
     value: 1
 - type: SophosNameValue
   fields:
-    name: MachO
+    name: VbaOnly
     type: 3
-    value: 1
+    value: 0
 - type: SophosNameValue
   fields:
-    name: MimeEmbedLines
-    type: 2
-    value: 500
-- type: SophosNameValue
-  fields:
-    name: CleanBmp
+    name: DeleteAllMacros
     type: 3
-    value: 1
+    value: 0
 - type: SophosNameValue
   fields:
-    name: SrpStreamHandling
+    name: Mime
     type: 3
-    value: 1
+    value: 0
 - type: SophosNameValue
   fields:
-    name: OLE2Handling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: IdeDir
-    type: 10
-    value: /opt/sophos-av/lib/sav
-- type: SophosNameValue
-  fields:
-    name: Html
+    name: Fsg
     type: 3
     value: 1
 - type: SophosNameValue
@@ -135,27 +85,7 @@ children:
     value: vdl
 - type: SophosNameValue
   fields:
-    name: Skip
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Vbe
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: GrpSelfExtract
-    type: 9
-    value: 2
-- type: SophosNameValue
-  fields:
-    name: Rtf
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: ExecFileDisinfection
+    name: Rpm
     type: 3
     value: 1
 - type: SophosNameValue
@@ -165,14 +95,79 @@ children:
     value: /opt/sophos-av/lib/sav
 - type: SophosNameValue
   fields:
-    name: VisioEmbedHandling
+    name: RemoveFromSystemRestore
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: IdeDir
+    type: 10
+    value: /opt/sophos-av/lib/sav
+- type: SophosNameValue
+  fields:
+    name: Vba5Dir
     type: 3
     value: 0
 - type: SophosNameValue
   fields:
-    name: OleDataMsoHandling
+    name: VisioFileHandling
     type: 3
     value: 1
+- type: SophosNameValue
+  fields:
+    name: MbinDecompression
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: PowerPointMacroHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: VbFiltering
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: FullSweep
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: PEHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: MaxRecursionDepth
+    type: 2
+    value: 16
+- type: SophosNameValue
+  fields:
+    name: SrpStreamHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: IgnoreTemplateBit
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Vbe
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: PeEmulator
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: AllowPartialVirusData
+    type: 3
+    value: 0
 - type: SophosNameValue
   fields:
     name: Bzip2
@@ -180,22 +175,12 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
-    name: MimeEmbedded
+    name: StorageReportAll
     type: 3
-    value: 1
+    value: 0
 - type: SophosNameValue
   fields:
-    name: GrpExecutable
-    type: 9
-    value: 2
-- type: SophosNameValue
-  fields:
-    name: GrpDisinfect
-    type: 9
-    value: 2
-- type: SophosNameValue
-  fields:
-    name: ProjectHandling
+    name: VBA3Handling
     type: 3
     value: 1
 - type: SophosNameValue
@@ -203,6 +188,31 @@ children:
     name: GrpSuper
     type: 9
     value: 2
+- type: SophosNameValue
+  fields:
+    name: GrpArchiveUnpack
+    type: 9
+    value: 2
+- type: SophosNameValue
+  fields:
+    name: VBA5Handling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: GrpClean
+    type: 9
+    value: 2
+- type: SophosNameValue
+  fields:
+    name: TnefEmbedHandling
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: MSCabinet
+    type: 3
+    value: 1
 - type: SophosNameValue
   fields:
     name: HqxDecompression
@@ -215,277 +225,27 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
+    name: Emulation
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
     name: ISCabinetFull
     type: 3
     value: 0
 - type: SophosNameValue
   fields:
-    name: DynamicDecompression
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: LoopBackEnabled
+    name: VisioEmbedHandling
     type: 3
     value: 0
 - type: SophosNameValue
   fields:
-    name: VisioFileHandling
+    name: Pdf
     type: 3
     value: 1
-- type: SophosNameValue
-  fields:
-    name: PECompact
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: TarDecompression
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: StorageReport
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: ConcatenatedArchives
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: RemoveFromSystemRestore
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: MSCompress
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Base64
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: VbaOnly
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: ArjDecompression
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: OleRawHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: PEHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: IgnoreTemplateBit
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: CmzDecompression
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: UTF16
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: ITSS
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: GrpMSOffice
-    type: 9
-    value: 2
-- type: SophosNameValue
-  fields:
-    name: DecompressVBA5
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: ActiveMimeHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: ScrapObjectHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: MSCabinet
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: MaxRecursionDepth
-    type: 2
-    value: 16
-- type: SophosNameValue
-  fields:
-    name: TnefEmbedHandling
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: UueDecompression
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: Rpm
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: NamespaceSupport
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: Lha
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: StorageDetOnly
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: CleanRiff
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: DeleteAllMacros
-    type: 3
-    value: 0
 - type: SophosNameValue
   fields:
     name: GZipDecompression
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: HelpHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: OutlookExpress
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: VBA3Handling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: StorageReportAll
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: PowerPointEmbeddedHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: CleanJpeg
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: VBA5Handling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: TnefAttachmentHandling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: MimeEmbedLimit
-    type: 2
-    value: 25
-- type: SophosNameValue
-  fields:
-    name: PeEmulator
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: DelVBA5Project
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: CleanGif
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: GrpArchiveUnpack
-    type: 9
-    value: 2
-- type: SophosNameValue
-  fields:
-    name: ISCabinet
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Msi
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: FullSweep
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: FullMacroSweep
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: ASPack
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Vba5p
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Elf
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: ExcelFormulaHandling
     type: 3
     value: 1
 - type: SophosNameValue
@@ -495,32 +255,42 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
-    name: SfxArchives
+    name: Msi
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: MimeEmbedded
     type: 3
     value: 1
 - type: SophosNameValue
   fields:
-    name: AppleSingle
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Fsg
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: Office2001Handling
-    type: 3
-    value: 1
-- type: SophosNameValue
-  fields:
-    name: GrpInternet
+    name: GrpMSOffice
     type: 9
     value: 2
 - type: SophosNameValue
   fields:
-    name: CleanPng
+    name: PECompact
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: DynamicDecompression
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ZipDecompression
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: StorageReport
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: CleanBmp
     type: 3
     value: 1
 - type: SophosNameValue
@@ -530,9 +300,14 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
-    name: VbaTable
+    name: Ole2FileDisinfection
     type: 3
-    value: 0
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: CleanGif
+    type: 3
+    value: 1
 - type: SophosNameValue
   fields:
     name: UnixArchive
@@ -540,12 +315,57 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
-    name: GrpMisc
+    name: GrpDisinfect
     type: 9
     value: 2
 - type: SophosNameValue
   fields:
-    name: Stuffit
+    name: OpenMacRf
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ProjectHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ISCabinet
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Upx
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: LoopBackEnabled
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: Office2001Handling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: MimeEmbedLimit
+    type: 2
+    value: 25
+- type: SophosNameValue
+  fields:
+    name: OutlookExpress
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: ExcelFormulaHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ActiveMimeHandling
     type: 3
     value: 1
 - type: SophosNameValue
@@ -555,19 +375,9 @@ children:
     value: 0
 - type: SophosNameValue
   fields:
-    name: FullPdf
-    type: 3
-    value: 0
-- type: SophosNameValue
-  fields:
-    name: MbinDecompression
+    name: TarDecompression
     type: 3
     value: 1
-- type: SophosNameValue
-  fields:
-    name: GrpClean
-    type: 9
-    value: 2
 - type: SophosNameValue
   fields:
     name: Saveset
@@ -575,7 +385,182 @@ children:
     value: 0
 - type: SophosNameValue
   fields:
+    name: DecompressVBA5
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Elf
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: OLE2Handling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: NamespaceSupport
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: MaxIntRecDepth
+    type: 2
+    value: 25
+- type: SophosNameValue
+  fields:
+    name: TnefAttachmentHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Html
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: MSCompress
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: CleanJpeg
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Java
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: OleDataMsoHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ASPack
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: PalmPilotHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: OleRawHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: MachO
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Skip
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: PowerPointEmbeddedHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: VbaTable
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: EnableAutoStop
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: Rtf
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: DelVBA5Project
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
     name: CleanTiff
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: UTF16
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: FullMacroSweep
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: GrpMisc
+    type: 9
+    value: 2
+- type: SophosNameValue
+  fields:
+    name: CmzDecompression
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: AppleSingle
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: FullPdf
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: Access
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: GrpSelfExtract
+    type: 9
+    value: 2
+- type: SophosNameValue
+  fields:
+    name: HelpHandling
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ITSS
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: ExecFileDisinfection
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: MimeEmbedLines
+    type: 2
+    value: 500
+- type: SophosNameValue
+  fields:
+    name: RarDecompression
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: Lha
     type: 3
     value: 1
 - type: SophosNameValue
@@ -585,6 +570,21 @@ children:
     value: 1
 - type: SophosNameValue
   fields:
-    name: Java
+    name: CleanMp3
     type: 3
     value: 1
+- type: SophosNameValue
+  fields:
+    name: CleanPng
+    type: 3
+    value: 1
+- type: SophosNameValue
+  fields:
+    name: ConcatenatedArchives
+    type: 3
+    value: 0
+- type: SophosNameValue
+  fields:
+    name: GrpExecutable
+    type: 9
+    value: 2

@@ -5,22 +5,9 @@ fields:
 children:
 - type: MetricGroupType
   fields:
-    description: System overview
     maxNumMetricGroups: 1
-    metric:
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/successes
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/failures
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/exceptions
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numAlerts
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numSLABreaches
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/active
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/cpuUsed
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/memoryUsed
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/systemMemoryTotal
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/systemMemoryUsed
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/systemCpu
-    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/diskUsedPercent
-    name: SystemOverview
+    metric: /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numMessages
+    name: Clients
 - type: MetricGroupType
   fields:
     maxNumMetricGroups: 10000
@@ -44,16 +31,6 @@ children:
       name: Method
 - type: MetricGroupType
   fields:
-    maxNumMetricGroups: 1
-    metric: /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numMessages
-    name: Clients
-- type: MetricGroupType
-  fields:
-    maxNumMetricGroups: 1
-    metric: /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numMessages
-    name: Services
-- type: MetricGroupType
-  fields:
     maxNumMetricGroups: 10000
     metric:
     - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numMessages
@@ -61,6 +38,29 @@ children:
     - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/failures
     - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/successes
     name: Client
+- type: MetricGroupType
+  fields:
+    maxNumMetricGroups: 1
+    metric: /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numMessages
+    name: Services
+- type: MetricGroupType
+  fields:
+    description: System overview
+    maxNumMetricGroups: 1
+    metric:
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/successes
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/failures
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/exceptions
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numAlerts
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/numSLABreaches
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/active
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/cpuUsed
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/memoryUsed
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/systemMemoryTotal
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/systemMemoryUsed
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/systemCpu
+    - /Server Settings/Monitoring Configuration/Metrics Metadata/System Metric Types/diskUsedPercent
+    name: SystemOverview
 - type: MetricGroupType
   fields:
     maxNumMetricGroups: 10000

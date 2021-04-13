@@ -5,19 +5,19 @@ fields:
 children:
 - type: XPath
   fields:
-    name: First Assertion (SAML 1.1)
-    xpath: //saml:Assertion[1]
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: urn:oasis:names:tc:SAML:1.0:assertion
-      prefix: saml
-- type: XPath
-  fields:
     name: First Assertion (SAML 2.0)
     xpath: //saml:Assertion[1]
   children:
   - type: XPathNamespace
     fields:
       URI: urn:oasis:names:tc:SAML:2.0:assertion
+      prefix: saml
+- type: XPath
+  fields:
+    name: First Assertion (SAML 1.1)
+    xpath: //saml:Assertion[1]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: urn:oasis:names:tc:SAML:1.0:assertion
       prefix: saml

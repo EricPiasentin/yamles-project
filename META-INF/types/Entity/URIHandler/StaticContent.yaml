@@ -1,6 +1,6 @@
 ---
 name: StaticContent
-version: 2
+version: 3
 fields:
   fileSystemPath:
     type: string
@@ -10,7 +10,7 @@ fields:
   generateIndex:
     type: boolean
     defaultValues:
-    - data: 1
+    - data: 0
     cardinality: 1
   indexfile:
     type: string

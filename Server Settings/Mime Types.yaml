@@ -5,34 +5,119 @@ fields:
 children:
 - type: MimeType
   fields:
-    extension: .wav
-    mimeType: audio/x-wav
+    extension: .pdf
+    mimeType: application/pdf
 - type: MimeType
   fields:
-    extension: .mid
-    mimeType: audio/x-midi
+    extension:
+    - .html
+    - .htm
+    mimeType: text/html
 - type: MimeType
   fields:
-    extension: .js
-    mimeType: application/javascript
+    extension: .doc
+    mimeType: application/msword
 - type: MimeType
   fields:
-    mimeType: application/hal+json
+    bodyFactory: com.vordel.mime.XMLBody$Factory
+    mimeType: application/*+xml
 - type: MimeType
   fields:
-    extension: .woff
-    mimeType: application/x-font-woff
+    bodyFactory: com.vordel.mime.Multipart$Factory
+    mimeType: multipart/*
+- type: MimeType
+  fields:
+    mimeType: video/vnd.vivo
+- type: MimeType
+  fields:
+    extension: .aiff
+    mimeType: audio/x-aiff
+- type: MimeType
+  fields:
+    extension: .png
+    mimeType: image/png
 - type: MimeType
   fields:
     bodyFactory: com.vordel.mime.XMLBody$Factory
     mimeType: text/xml*
 - type: MimeType
   fields:
-    mimeType: video/vnd.vivo
+    extension: .eot
+    mimeType: application/vnd.ms-fontobject
 - type: MimeType
   fields:
-    bodyFactory: com.vordel.mime.XMLBody$Factory
-    mimeType: application/xml
+    extension: .gz
+    mimeType: application/x-gzip
+- type: MimeType
+  fields:
+    extension: .css
+    mimeType: text/css
+- type: MimeType
+  fields:
+    extension: .wav
+    mimeType: audio/x-wav
+- type: MimeType
+  fields:
+    extension: .js
+    mimeType: application/javascript
+- type: MimeType
+  fields:
+    extension: .mid
+    mimeType: audio/x-midi
+- type: MimeType
+  fields:
+    mimeType: application/octet-stream
+- type: MimeType
+  fields:
+    extension: .jvx
+    mimeType: application/x-java-serialized-object
+- type: MimeType
+  fields:
+    extension: .tar
+    mimeType: application/x-gtar
+- type: MimeType
+  fields:
+    mimeType: multipart/x-gzip
+- type: MimeType
+  fields:
+    mimeType: application/hal+json
+- type: MimeType
+  fields:
+    extension:
+    - .p12
+    - .pfx
+    mimeType: application/x-pkcs12
+- type: MimeType
+  fields:
+    bodyFactory: com.vordel.mime.JSONBody$Factory
+    extension: .json
+    mimeType: application/json
+- type: MimeType
+  fields:
+    extension: .rtf
+    mimeType: application/rtf
+- type: MimeType
+  fields:
+    mimeType: audio/basic
+- type: MimeType
+  fields:
+    extension: .bmp
+    mimeType: image/x-xbitmap
+- type: MimeType
+  fields:
+    extension: .zip
+    mimeType: application/zip
+- type: MimeType
+  fields:
+    extension: .mov
+    mimeType: video/x-msvideo
+- type: MimeType
+  fields:
+    mimeType: text/richtext
+- type: MimeType
+  fields:
+    extension: .bmo
+    mimeType: image/bmo
 - type: MimeType
   fields:
     extension:
@@ -44,32 +129,12 @@ children:
     mimeType: text/plain
 - type: MimeType
   fields:
-    extension:
-    - .yml
-    - .yaml
-    mimeType: text/yaml
+    extension: .jar
+    mimeType: application/x-java-archive
 - type: MimeType
   fields:
-    extension: .jvx
-    mimeType: application/x-java-serialized-object
-- type: MimeType
-  fields:
-    extension: .eot
-    mimeType: application/vnd.ms-fontobject
-- type: MimeType
-  fields:
-    bodyFactory: com.vordel.mime.zip.ZipPart$Factory
-    extension: .zip
-    mimeType: multipart/x-zip
-- type: MimeType
-  fields:
-    extension: .rtf
-    mimeType: application/rtf
-- type: MimeType
-  fields:
-    bodyFactory: com.vordel.mime.JSONBody$Factory
-    extension: .json
-    mimeType: application/json
+    bodyFactory: com.vordel.mime.XMLBody$Factory
+    mimeType: http://schemas.xmlsoap.org/soap/envelope/
 - type: MimeType
   fields:
     extension:
@@ -78,14 +143,34 @@ children:
     mimeType: image/jpeg
 - type: MimeType
   fields:
-    extension:
-    - .p12
-    - .pfx
-    mimeType: application/x-pkcs12
+    extension: .ttf
+    mimeType: application/x-font-ttf
 - type: MimeType
   fields:
-    extension: .doc
-    mimeType: application/msword
+    bodyFactory: com.vordel.mime.XMLBody$Factory
+    mimeType: application/xml
+- type: MimeType
+  fields:
+    extension: .woff
+    mimeType: application/x-font-woff
+- type: MimeType
+  fields:
+    extension: .tar
+    mimeType: application/x-tar
+- type: MimeType
+  fields:
+    extension:
+    - .yml
+    - .yaml
+    mimeType: text/yaml
+- type: MimeType
+  fields:
+    extension: .gif
+    mimeType: image/gif
+- type: MimeType
+  fields:
+    extension: .tiff
+    mimeType: image/tiff
 - type: MimeType
   fields:
     extension: .jvm
@@ -95,81 +180,13 @@ children:
     mimeType: video/quicktime
 - type: MimeType
   fields:
-    extension: .jar
-    mimeType: application/x-java-archive
-- type: MimeType
-  fields:
-    extension: .tar
-    mimeType: application/x-tar
-- type: MimeType
-  fields:
-    extension: .pdf
-    mimeType: application/pdf
-- type: MimeType
-  fields:
-    extension: .css
-    mimeType: text/css
-- type: MimeType
-  fields:
-    mimeType: application/octet-stream
-- type: MimeType
-  fields:
-    extension: .csv
-    mimeType: text/csv
-- type: MimeType
-  fields:
-    extension:
-    - .mpeg
-    - .mpg
-    mimeType: video/mpeg
-- type: MimeType
-  fields:
+    bodyFactory: com.vordel.mime.zip.ZipPart$Factory
     extension: .zip
-    mimeType: application/zip
+    mimeType: multipart/x-zip
 - type: MimeType
   fields:
-    mimeType: multipart/x-gzip
-- type: MimeType
-  fields:
-    extension: .png
-    mimeType: image/png
-- type: MimeType
-  fields:
-    bodyFactory: com.vordel.mime.XMLBody$Factory
-    extension:
-    - .xml
-    - .wsdl
-    - .WSDL
-    mimeType: text/xml
-- type: MimeType
-  fields:
-    mimeType: text/richtext
-- type: MimeType
-  fields:
-    extension: .bmp
-    mimeType: image/x-xbitmap
-- type: MimeType
-  fields:
-    extension: .gz
-    mimeType: application/x-gzip
-- type: MimeType
-  fields:
-    extension: .tar
-    mimeType: application/x-gtar
-- type: MimeType
-  fields:
-    bodyFactory: com.vordel.mime.FormURLEncodedBody$Factory
-    mimeType: application/x-www-form-urlencoded
-- type: MimeType
-  fields:
-    extension: .gif
-    mimeType: image/gif
-- type: MimeType
-  fields:
-    extension:
-    - .html
-    - .htm
-    mimeType: text/html
+    extension: .svg
+    mimeType: image/svg+xml
 - type: MimeType
   fields:
     extension:
@@ -179,48 +196,31 @@ children:
     mimeType: application/x-x509-ca-cert
 - type: MimeType
   fields:
-    bodyFactory: com.vordel.mime.XMLBody$Factory
-    mimeType: application/*+xml
+    extension:
+    - .mpeg
+    - .mpg
+    mimeType: video/mpeg
 - type: MimeType
   fields:
-    extension: .svg
-    mimeType: image/svg+xml
-- type: MimeType
-  fields:
-    mimeType: audio/basic
-- type: MimeType
-  fields:
-    extension: .aiff
-    mimeType: audio/x-aiff
-- type: MimeType
-  fields:
-    bodyFactory: com.vordel.mime.Multipart$Factory
-    mimeType: multipart/*
-- type: MimeType
-  fields:
-    bodyFactory: com.vordel.mime.XMLBody$Factory
-    mimeType: application/xml*
+    bodyFactory: com.vordel.mime.FormURLEncodedBody$Factory
+    mimeType: application/x-www-form-urlencoded
 - type: MimeType
   fields:
     extension: .ps
     mimeType: application/postscript
 - type: MimeType
   fields:
-    extension: .bmo
-    mimeType: image/bmo
+    bodyFactory: com.vordel.mime.XMLBody$Factory
+    mimeType: application/xml*
 - type: MimeType
   fields:
-    extension: .tiff
-    mimeType: image/tiff
+    extension: .csv
+    mimeType: text/csv
 - type: MimeType
   fields:
     bodyFactory: com.vordel.mime.XMLBody$Factory
-    mimeType: http://schemas.xmlsoap.org/soap/envelope/
-- type: MimeType
-  fields:
-    extension: .ttf
-    mimeType: application/x-font-ttf
-- type: MimeType
-  fields:
-    extension: .mov
-    mimeType: video/x-msvideo
+    extension:
+    - .xml
+    - .wsdl
+    - .WSDL
+    mimeType: text/xml

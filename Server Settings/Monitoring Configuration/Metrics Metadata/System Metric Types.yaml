@@ -10,10 +10,10 @@ children:
   children:
   - type: MetricRange
     fields:
-      name: respStatRange1
+      name: respStatRange4
       operator: <
-      order: 1
-      value: 200
+      order: 4
+      value: 500
   - type: MetricRange
     fields:
       name: respStatRange3
@@ -22,16 +22,16 @@ children:
       value: 400
   - type: MetricRange
     fields:
+      name: respStatRange1
+      operator: <
+      order: 1
+      value: 200
+  - type: MetricRange
+    fields:
       name: respStatRange5
       operator: <
       order: 5
       value: 600
-  - type: MetricRange
-    fields:
-      name: respStatRange4
-      operator: <
-      order: 4
-      value: 500
   - type: MetricRange
     fields:
       name: respStatRange2
@@ -40,11 +40,34 @@ children:
       value: 300
 - type: MetricTypeValue
   fields:
-    averageName: cpuUsedAvg
-    maxName: cpuUsedMax
-    minName: cpuUsedMin
-    name: cpuUsed
+    name: diskUsedPercent
     resetOnNewTimeWindow: false
+- type: MetricTypeValue
+  fields:
+    name: numTimeouts
+- type: MetricTypeValue
+  fields:
+    name: numTransactions
+- type: MetricTypeValue
+  fields:
+    name: systemMemoryTotal
+    resetOnNewTimeWindow: false
+- type: MetricTypeValue
+  fields:
+    name: volumeBytesIn
+- type: MetricTypeValue
+  fields:
+    name: failures
+- type: MetricTypeValue
+  fields:
+    name: successes
+- type: MetricTypeValue
+  fields:
+    averageName: processingTimeAvg
+    maxName: processingTimeMax
+    minName: processingTimeMin
+    name: processingTime
+    trackCurrentValue: false
 - type: MetricTypeValue
   fields:
     averageName: memoryUsedAvg
@@ -52,50 +75,6 @@ children:
     minName: memoryUsedMin
     name: memoryUsed
     resetOnNewTimeWindow: false
-    trackCurrentValue: false
-- type: MetricTypeValue
-  fields:
-    name: exceptions
-- type: MetricTypeValue
-  fields:
-    name: volumeBytesIn
-- type: MetricTypeValue
-  fields:
-    name: numSLABreaches
-- type: MetricTypeValue
-  fields:
-    name: systemMemoryTotal
-    resetOnNewTimeWindow: false
-- type: MetricTypeValue
-  fields:
-    name: numReportedDowns
-- type: MetricTypeValue
-  fields:
-    name: volumeBytesOut
-- type: MetricTypeValue
-  fields:
-    name: numTransactions
-- type: MetricTypeValue
-  fields:
-    name: active
-- type: MetricTypeValue
-  fields:
-    name: numReportedUps
-- type: MetricTypeValue
-  fields:
-    name: failures
-- type: MetricTypeValue
-  fields:
-    name: numTimeouts
-- type: MetricTypeValue
-  fields:
-    name: successes
-- type: MetricTypeValue
-  fields:
-    averageName: reponseTimeAvg
-    maxName: reponseTimeMax
-    minName: reponseTimeMin
-    name: responseTime
     trackCurrentValue: false
 - type: MetricTypeRangeCount
   fields:
@@ -107,34 +86,16 @@ children:
   children:
   - type: MetricRange
     fields:
-      name: respTimeRange3
+      name: respTimeRange4
       operator: <
-      order: 4
-      value: 1000
+      order: 5
+      value: 3000
   - type: MetricRange
     fields:
       name: respTimeRange5
       operator: <
       order: 6
       value: 6000
-  - type: MetricRange
-    fields:
-      name: respTimeRange9
-      operator: '>='
-      order: 10
-      value: 60000
-  - type: MetricRange
-    fields:
-      name: respTimeRange7
-      operator: <
-      order: 8
-      value: 30000
-  - type: MetricRange
-    fields:
-      name: respTimeRange4
-      operator: <
-      order: 5
-      value: 3000
   - type: MetricRange
     fields:
       name: respTimeRange6
@@ -149,32 +110,82 @@ children:
       value: 10
   - type: MetricRange
     fields:
-      name: respTimeRange8
-      operator: <
-      order: 9
-      value: 60000
-  - type: MetricRange
-    fields:
       name: respTimeRange10
       operator: <
       order: 3
       value: 500
   - type: MetricRange
     fields:
+      name: respTimeRange9
+      operator: '>='
+      order: 10
+      value: 60000
+  - type: MetricRange
+    fields:
       name: respTimeRange2
       operator: <
       order: 2
       value: 100
+  - type: MetricRange
+    fields:
+      name: respTimeRange3
+      operator: <
+      order: 4
+      value: 1000
+  - type: MetricRange
+    fields:
+      name: respTimeRange8
+      operator: <
+      order: 9
+      value: 60000
+  - type: MetricRange
+    fields:
+      name: respTimeRange7
+      operator: <
+      order: 8
+      value: 30000
 - type: MetricTypeValue
   fields:
-    averageName: processingTimeAvg
-    maxName: processingTimeMax
-    minName: processingTimeMin
-    name: processingTime
-    trackCurrentValue: false
+    averageName: cpuUsedAvg
+    maxName: cpuUsedMax
+    minName: cpuUsedMin
+    name: cpuUsed
+    resetOnNewTimeWindow: false
+- type: MetricTypeValue
+  fields:
+    name: numReportedUps
+- type: MetricTypeValue
+  fields:
+    name: systemMemoryUsed
+    resetOnNewTimeWindow: false
 - type: MetricTypeValue
   fields:
     name: numMessages
+- type: MetricTypeValue
+  fields:
+    name: volumeBytesOut
+- type: MetricTypeValue
+  fields:
+    averageName: reponseTimeAvg
+    maxName: reponseTimeMax
+    minName: reponseTimeMin
+    name: responseTime
+    trackCurrentValue: false
+- type: MetricTypeValue
+  fields:
+    name: numReportedDowns
+- type: MetricTypeValue
+  fields:
+    name: exceptions
+- type: MetricTypeValue
+  fields:
+    name: numAlerts
+- type: MetricTypeValue
+  fields:
+    name: numSLABreaches
+- type: MetricTypeValue
+  fields:
+    name: active
 - type: MetricTypeValue
   fields:
     averageName: systemCpuAvg
@@ -183,14 +194,3 @@ children:
     name: systemCpu
     resetOnNewTimeWindow: false
     trackCurrentValue: false
-- type: MetricTypeValue
-  fields:
-    name: diskUsedPercent
-    resetOnNewTimeWindow: false
-- type: MetricTypeValue
-  fields:
-    name: systemMemoryUsed
-    resetOnNewTimeWindow: false
-- type: MetricTypeValue
-  fields:
-    name: numAlerts

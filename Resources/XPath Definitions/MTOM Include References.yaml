@@ -5,9 +5,26 @@ fields:
 children:
 - type: XPath
   fields:
+    name: First MTOM Include in SOAP Body (SOAP 1.1)
+    xpath: /soap11:Envelope/soap11:Body/xop:Include[1]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://www.w3.org/2004/08/xop/include
+      prefix: xop
+  - type: XPathNamespace
+    fields:
+      URI: http://schemas.xmlsoap.org/soap/envelope/
+      prefix: soap11
+- type: XPath
+  fields:
     name: First MTOM Include in SOAP Body (SOAP 1.1 or SOAP 1.2)
     xpath: /soap11:Envelope/soap11:Body/xop:Include[1] | /soap12:Envelope/soap12:Body/xop:Include[1]
   children:
+  - type: XPathNamespace
+    fields:
+      URI: http://www.w3.org/2004/08/xop/include
+      prefix: xop
   - type: XPathNamespace
     fields:
       URI: http://www.w3.org/2003/05/soap-envelope
@@ -16,10 +33,6 @@ children:
     fields:
       URI: http://schemas.xmlsoap.org/soap/envelope/
       prefix: soap11
-  - type: XPathNamespace
-    fields:
-      URI: http://www.w3.org/2004/08/xop/include
-      prefix: xop
 - type: XPath
   fields:
     name: First MTOM Include in Message
@@ -31,27 +44,14 @@ children:
       prefix: xop
 - type: XPath
   fields:
-    name: First MTOM Include in SOAP Body (SOAP 1.1)
-    xpath: /soap11:Envelope/soap11:Body/xop:Include[1]
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: http://schemas.xmlsoap.org/soap/envelope/
-      prefix: soap11
-  - type: XPathNamespace
-    fields:
-      URI: http://www.w3.org/2004/08/xop/include
-      prefix: xop
-- type: XPath
-  fields:
     name: First MTOM Include in SOAP Body (SOAP 1.2)
     xpath: /soap12:Envelope/soap12:Body/xop:Include[1]
   children:
   - type: XPathNamespace
     fields:
-      URI: http://www.w3.org/2003/05/soap-envelope
-      prefix: soap12
-  - type: XPathNamespace
-    fields:
       URI: http://www.w3.org/2004/08/xop/include
       prefix: xop
+  - type: XPathNamespace
+    fields:
+      URI: http://www.w3.org/2003/05/soap-envelope
+      prefix: soap12

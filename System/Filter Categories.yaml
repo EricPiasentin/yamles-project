@@ -5,16 +5,16 @@ fields:
 children:
 - type: Category
   fields:
-    name: authorization
+    name: authentication
 - type: Category
   fields:
     name: content-filtering
 - type: Category
   fields:
-    name: authentication
+    name: attribute
 - type: Category
   fields:
     name: miscellaneous
 - type: Category
   fields:
-    name: attribute
+    name: authorization

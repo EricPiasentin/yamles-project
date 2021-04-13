@@ -1,6 +1,6 @@
 ---
 name: PortalConfiguration
-version: 40
+version: 41
 class: com.vordel.apiportal.config.PortalConfiguration
 fields:
   adminDN:

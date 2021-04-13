@@ -5,39 +5,13 @@ fields:
 children:
 - type: XPath
   fields:
-    name: All Attributes named "AttributeNamespace"
-    xpath: //@AttributeNamespace
-- type: XPath
-  fields:
-    name: All Comment Nodes
-    xpath: //comment()
-- type: XPath
-  fields:
-    name: The Second DerivedKeyToken
-    xpath: //wssc:DerivedKeyToken[2]
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: http://schemas.xmlsoap.org/ws/2005/02/sc
-      prefix: wssc
-- type: XPath
-  fields:
-    name: Text Nodes in SOAP Body
-    xpath: /soap:Envelope/soap:Body/text()
+    name: SOAP Header "mustUnderstand" Attribute
+    xpath: /soap:Envelope[1]/soap:Header[1]/@soap:mustUnderstand[1]
   children:
   - type: XPathNamespace
     fields:
       URI: http://schemas.xmlsoap.org/soap/envelope/
       prefix: soap
-- type: XPath
-  fields:
-    name: All WSSE Security elements
-    xpath: //wsse:Security
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
-      prefix: wsse
 - type: XPath
   fields:
     name: WSSE Security element with soap:actor "user1"
@@ -53,17 +27,39 @@ children:
       prefix: soap
 - type: XPath
   fields:
-    name: SOAP Header "mustUnderstand" Attribute
-    xpath: /soap:Envelope[1]/soap:Header[1]/@soap:mustUnderstand[1]
+    name: All WSSE Security elements
+    xpath: //wsse:Security
   children:
   - type: XPathNamespace
     fields:
-      URI: http://schemas.xmlsoap.org/soap/envelope/
-      prefix: soap
+      URI: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+      prefix: wsse
 - type: XPath
   fields:
     name: The First Attribute named "AttributeNamespace"
     xpath: //*[@AttributeNamespace][1]/@AttributeNamespace
+- type: XPath
+  fields:
+    name: The First Encryption ReferenceList
+    xpath: //enc:ReferenceList[1]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://www.w3.org/2001/04/xmlenc#
+      prefix: enc
+- type: XPath
+  fields:
+    name: The Second DerivedKeyToken
+    xpath: //wssc:DerivedKeyToken[2]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://schemas.xmlsoap.org/ws/2005/02/sc
+      prefix: wssc
+- type: XPath
+  fields:
+    name: All Attributes named "AttributeNamespace"
+    xpath: //@AttributeNamespace
 - type: XPath
   fields:
     name: The First WSSE Security element
@@ -75,10 +71,14 @@ children:
       prefix: wsse
 - type: XPath
   fields:
-    name: The First Encryption ReferenceList
-    xpath: //enc:ReferenceList[1]
+    name: Text Nodes in SOAP Body
+    xpath: /soap:Envelope/soap:Body/text()
   children:
   - type: XPathNamespace
     fields:
-      URI: http://www.w3.org/2001/04/xmlenc#
-      prefix: enc
+      URI: http://schemas.xmlsoap.org/soap/envelope/
+      prefix: soap
+- type: XPath
+  fields:
+    name: All Comment Nodes
+    xpath: //comment()

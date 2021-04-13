@@ -5,8 +5,52 @@ fields:
 children:
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaX509Data
-    valueType: http://www.w3.org/2000/09/xmldsig#X509Data
+    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaSKI
+    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.EncryptedKeyTokenFinderViaXPath
+    valueType: http://www.docs.oasis-open.org/wss/2004/07/oasis-200407-EncryptedKeyToken-profile-1.0#EncryptedKey
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaBst
+    valueType: http://www.vordel.com/bst
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
+    valueType: http://docs.oasis-open.org/wss/2004/XX/oasis-2004XX-wss-saml-token-profile-1.0#SAMLAssertion-1.1
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.EncryptedKeyTokenFinderViaXPath
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#EncryptedKey
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.EncryptedKeyTokenFinderViaDerived
+    valueType: http://schemas.xmlsoap.org/ws/2005/02/sc/dk
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.SamlTokenFinderViaStrEmbedded
+    valueType: http://www.vordel.com/embedded#ASSERTION
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.SamlTokenFinderViaWsuIdXPath
+    valueType: http://www.vordel.com/default#ASSERTION
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.SamlTokenFinderViaAssertionIdXPath
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID#ASSERTION
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaEncryptedKeySHA1
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#EncryptedKeySHA1
 - type: TokenFinder
   fields:
     finderClass: com.vordel.security.finder.CertTokenFinderViaBst
@@ -17,80 +61,36 @@ children:
     valueType: http://docs.oasis-open.org/wss/oasis-wss-kerberos-token-profile-1.1#Kerberosv5APREQSHA1
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.SamlTokenFinderViaStrEmbedded
-    valueType: http://www.vordel.com/embedded#ASSERTION
+    finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaApReqToken
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-kerberos-token-profile-1.1#GSS_Kerberosv5_AP_REQ
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaThumbprint
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#ThumbprintSHA1
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaSecurityContext
-    valueType: http://schemas.xmlsoap.org/ws/2005/02/sc/sct
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.EncryptedKeyTokenFinderViaXPath
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#EncryptedKey
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaBst
-    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v1
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaAttachment
-    valueType: http://www.vordel.com/attachment
+    finderClass: com.vordel.security.finder.SamlTokenFinderViaAssertionIdXPath
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID#ASSERTION
 - type: TokenFinder
   fields:
     finderClass: com.vordel.security.finder.CertTokenFinderViaBst
     valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3
 - type: TokenFinder
   fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaBst
+    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509PKIPathv1
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaBst
+    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509
+- type: TokenFinder
+  fields:
     finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaEncryptedKeySHA1
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#EncryptedKeySHA1
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaSKI
-    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509SubjectKeyIdentifier
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID
 - type: TokenFinder
   fields:
     finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaUsernameToken
     valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#UsernameToken
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaThumbprint
-    valueType: http://docs.oasis-open.org/wss/2004/xx/oasis-2004xx-wss-soap-message-security-1.0#ThumbprintSHA1
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
-    valueType: http://docs.oasis-open.org/wss/2004/XX/oasis-2004XX-wss-saml-token-profile-1.0#SAMLAssertion-1.1
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.EncryptedKeyTokenFinderViaXPath
-    valueType: http://www.docs.oasis-open.org/wss/2004/07/oasis-200407-EncryptedKeyToken-profile-1.0#EncryptedKey
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1
-- type: TokenFinder
-  fields:
     finderClass: com.vordel.security.finder.CertTokenFinderViaBst
-    valueType: http://www.vordel.com/bst
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaBst
-    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509PKIPathv1
+    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v1
 - type: TokenFinder
   fields:
     finderClass:
@@ -100,29 +100,29 @@ children:
     valueType: http://www.vordel.com/default
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.CertTokenFinderViaBst
-    valueType: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509
+    finderClass: com.vordel.security.finder.CertTokenFinderViaThumbprint
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-soap-message-security-1.1#ThumbprintSHA1
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.SamlTokenFinderViaAssertionIdXPath
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLID#ASSERTION
+    finderClass: com.vordel.security.finder.CertTokenFinderViaX509Data
+    valueType: http://www.w3.org/2000/09/xmldsig#X509Data
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaThumbprint
+    valueType: http://docs.oasis-open.org/wss/2004/xx/oasis-2004xx-wss-soap-message-security-1.0#ThumbprintSHA1
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.CertTokenFinderViaSaml
+    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV2.0
+- type: TokenFinder
+  fields:
+    finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaSecurityContext
+    valueType: http://schemas.xmlsoap.org/ws/2005/02/sc/sct
 - type: TokenFinder
   fields:
     finderClass: com.vordel.security.finder.CertTokenFinderViaStrEmbedded
     valueType: http://www.vordel.com/embedded
 - type: TokenFinder
   fields:
-    finderClass: com.vordel.security.finder.SamlTokenFinderViaAssertionIdXPath
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0#SAMLAssertionID#ASSERTION
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.HmacSecretTokenFinderViaApReqToken
-    valueType: http://docs.oasis-open.org/wss/oasis-wss-kerberos-token-profile-1.1#GSS_Kerberosv5_AP_REQ
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.SamlTokenFinderViaWsuIdXPath
-    valueType: http://www.vordel.com/default#ASSERTION
-- type: TokenFinder
-  fields:
-    finderClass: com.vordel.security.finder.EncryptedKeyTokenFinderViaDerived
-    valueType: http://schemas.xmlsoap.org/ws/2005/02/sc/dk
+    finderClass: com.vordel.security.finder.CertTokenFinderViaAttachment
+    valueType: http://www.vordel.com/attachment

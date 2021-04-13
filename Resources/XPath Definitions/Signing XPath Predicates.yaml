@@ -10,30 +10,12 @@ children:
   children:
   - type: XPathNamespace
     fields:
+      URI: urn:oasis:names:tc:SAML:1.0:assertion
+      prefix: saml
+  - type: XPathNamespace
+    fields:
       URI: http://schemas.xmlsoap.org/soap/envelope/
       prefix: soap
-  - type: XPathNamespace
-    fields:
-      URI: urn:oasis:names:tc:SAML:1.0:assertion
-      prefix: saml
-- type: XPath
-  fields:
-    name: Sign SAML 2.0 assertion
-    xpath: ancestor-or-self::saml:Assertion
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: urn:oasis:names:tc:SAML:2.0:assertion
-      prefix: saml
-- type: XPath
-  fields:
-    name: Sign SAML 1.0 assertion
-    xpath: ancestor-or-self::saml:Assertion
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: urn:oasis:names:tc:SAML:1.0:assertion
-      prefix: saml
 - type: XPath
   fields:
     name: Sign SOAP Body
@@ -45,13 +27,9 @@ children:
       prefix: soap
 - type: XPath
   fields:
-    name: Sign SOAP Body and SAML 2.0 assertion
-    xpath: ancestor-or-self::soap:Body | ancestor-or-self::saml:Assertion
+    name: Sign SAML 2.0 assertion
+    xpath: ancestor-or-self::saml:Assertion
   children:
-  - type: XPathNamespace
-    fields:
-      URI: http://schemas.xmlsoap.org/soap/envelope/
-      prefix: soap
   - type: XPathNamespace
     fields:
       URI: urn:oasis:names:tc:SAML:2.0:assertion
@@ -65,3 +43,25 @@ children:
     fields:
       URI: http://www.w3.org/2000/09/xmldsig#
       prefix: dsig
+- type: XPath
+  fields:
+    name: Sign SAML 1.0 assertion
+    xpath: ancestor-or-self::saml:Assertion
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: urn:oasis:names:tc:SAML:1.0:assertion
+      prefix: saml
+- type: XPath
+  fields:
+    name: Sign SOAP Body and SAML 2.0 assertion
+    xpath: ancestor-or-self::soap:Body | ancestor-or-self::saml:Assertion
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://schemas.xmlsoap.org/soap/envelope/
+      prefix: soap
+  - type: XPathNamespace
+    fields:
+      URI: urn:oasis:names:tc:SAML:2.0:assertion
+      prefix: saml

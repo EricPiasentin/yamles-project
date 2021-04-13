@@ -5,13 +5,17 @@ fields:
 children:
 - type: XPath
   fields:
-    name: SOAP Body Element
-    xpath: /soap:Envelope[1]/soap:Body[1]
+    name: WSSE Security element with soap:actor "user1"
+    xpath: //wsse:Security[@soap:actor='user1']
   children:
   - type: XPathNamespace
     fields:
       URI: http://schemas.xmlsoap.org/soap/envelope/
       prefix: soap
+  - type: XPathNamespace
+    fields:
+      URI: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
+      prefix: wsse
 - type: XPath
   fields:
     name: The First Encryption ReferenceList
@@ -25,24 +29,6 @@ children:
   fields:
     name: All Attributes named "AttributeNamespace"
     xpath: //@AttributeNamespace
-- type: XPath
-  fields:
-    name: SOAP Header Element
-    xpath: /soap:Envelope[1]/soap:Header[1]
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: http://schemas.xmlsoap.org/soap/envelope/
-      prefix: soap
-- type: XPath
-  fields:
-    name: SOAP Header "mustUnderstand" Attribute
-    xpath: /soap:Envelope[1]/soap:Header[1]/@soap:mustUnderstand[1]
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: http://schemas.xmlsoap.org/soap/envelope/
-      prefix: soap
 - type: XPath
   fields:
     name: The First Signature
@@ -63,19 +49,6 @@ children:
       prefix: wsse
 - type: XPath
   fields:
-    name: WSSE Security element with soap:actor "user1"
-    xpath: //wsse:Security[@soap:actor='user1']
-  children:
-  - type: XPathNamespace
-    fields:
-      URI: http://schemas.xmlsoap.org/soap/envelope/
-      prefix: soap
-  - type: XPathNamespace
-    fields:
-      URI: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
-      prefix: wsse
-- type: XPath
-  fields:
     name: The First WSSE Security element
     xpath: //wsse:Security[1]
   children:
@@ -83,6 +56,15 @@ children:
     fields:
       URI: http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd
       prefix: wsse
+- type: XPath
+  fields:
+    name: SOAP Header Element
+    xpath: /soap:Envelope[1]/soap:Header[1]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://schemas.xmlsoap.org/soap/envelope/
+      prefix: soap
 - type: XPath
   fields:
     name: SOAP Method Element
@@ -96,3 +78,21 @@ children:
   fields:
     name: The First Attribute named "AttributeNamespace"
     xpath: //*[@AttributeNamespace][1]/@AttributeNamespace
+- type: XPath
+  fields:
+    name: SOAP Header "mustUnderstand" Attribute
+    xpath: /soap:Envelope[1]/soap:Header[1]/@soap:mustUnderstand[1]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://schemas.xmlsoap.org/soap/envelope/
+      prefix: soap
+- type: XPath
+  fields:
+    name: SOAP Body Element
+    xpath: /soap:Envelope[1]/soap:Body[1]
+  children:
+  - type: XPathNamespace
+    fields:
+      URI: http://schemas.xmlsoap.org/soap/envelope/
+      prefix: soap
